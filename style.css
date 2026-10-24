@@ -124,7 +124,7 @@ nav {
 .position-abs {
   position: absolute;
   bottom: 0;
-  right: 15rem;
+  right: -9rem;
 }
 .arrow-span:link,
 .arrow-span:visited {
@@ -425,4 +425,516 @@ nav {
 .footer-text {
   display: inline-block;
   font-size: 1.6rem;
+}
+/* ///////////////////////////////////////// */
+Responsiveness
+/* ///////////////////////////////////////// */
+
+/* ==========================================
+   RESPONSIVE PORTFOLIO
+   Desktop -> Tablet -> Mobile
+========================================== */
+
+/* General layout safeguards */
+.container {
+  width: 100%;
+  padding-inline: 2.4rem;
+}
+
+.section-center {
+  width: 100%;
+  max-width: 100rem;
+}
+
+.skills--box {
+  width: 100%;
+  max-width: 120rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.skills-card {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+}
+
+.skill-description {
+  width: 100%;
+  max-width: 24rem;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+.list-box,
+.operations__content,
+.interest-text-box {
+  min-width: 0;
+}
+
+.operations__content p,
+.list-box li {
+  overflow-wrap: anywhere;
+}
+
+.btn--say-hello:link,
+.btn--say-hello:visited {
+  max-width: 100%;
+  text-align: center;
+}
+
+/* ==========================================
+   TABLETS AND SMALL LAPTOPS: <= 1024px
+========================================== */
+@media (max-width: 64em) {
+  .container {
+    padding-inline: 3.2rem;
+  }
+
+  nav {
+    padding: 3.5rem 0;
+    gap: 2rem;
+  }
+
+  .right {
+    width: auto;
+    gap: 1.8rem;
+  }
+
+  .nav__right:link,
+  .nav__left:link,
+  .nav__right:visited,
+  .nav__left:visited {
+    font-size: 1.8rem;
+  }
+
+  .nav__right:hover,
+  .nav__right:active {
+    padding: 0.6rem 1.2rem;
+    scale: 1;
+  }
+
+  .section-center {
+    max-width: 90rem;
+  }
+
+  /* Hero and introduction */
+  .reusable-flex {
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 0;
+  }
+
+  .text-box {
+    font-size: 2.8rem;
+  }
+
+  .header--image-box {
+    width: 25rem;
+    height: 34rem;
+    flex-shrink: 0;
+  }
+
+  .position-abs {
+    right: -4rem;
+    bottom: -3rem;
+  }
+
+  .introductory--paragraph {
+    margin-top: 3rem;
+    line-height: 1.8;
+  }
+
+  /* Skills: four columns become two */
+  .skills--box {
+    padding: 4rem 2.8rem;
+    min-height: auto;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .skills-card {
+    min-height: 29rem;
+    padding: 3rem 2rem;
+  }
+
+  .skills-title-box {
+    padding-bottom: 4.5rem;
+  }
+
+  /* Journey */
+  .list-box {
+    margin-left: 3.2rem;
+    line-height: 1.9;
+  }
+
+  /* Values tabs */
+  .live-by-box {
+    padding-inline: 2.4rem;
+  }
+
+  .operations__tab {
+    margin-right: 1.2rem;
+    padding: 1.2rem 2.2rem;
+  }
+
+  .operations__content {
+    padding: 2.5rem 2rem 4.5rem;
+  }
+
+  .interest {
+    margin-top: 10rem;
+  }
+
+  .btn--say-hello:link,
+  .btn--say-hello:visited {
+    padding: 1.2rem 7rem;
+  }
+}
+
+/* ==========================================
+   PHONES: <= 600px
+========================================== */
+@media (max-width: 37.5em) {
+  .container {
+    padding-inline: 2rem;
+  }
+
+  .section-center {
+    width: 100%;
+  }
+
+  .header {
+    margin-bottom: 6.5rem;
+  }
+
+  /* Navigation */
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2.8rem 0 3.5rem;
+  }
+
+  .nav__left:link,
+  .nav__left:visited {
+    font-size: 2.2rem;
+  }
+
+  .right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem 2rem;
+  }
+
+  .nav__right:link,
+  .nav__right:visited {
+    font-size: 1.6rem;
+  }
+
+  .nav__right:hover,
+  .nav__right:active {
+    padding: 0.5rem 0.8rem;
+    box-shadow: none;
+  }
+
+  /* Hero: heading first, image below */
+  .reusable-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    padding: 2rem 0;
+  }
+
+  .text-box {
+    width: 100%;
+    font-size: 2.7rem;
+    text-align: center;
+  }
+
+  .text-box h1 {
+    line-height: 1.3;
+  }
+
+  .span--btn {
+    margin-top: 1.8rem;
+    padding: 1.4rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  .position-rel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+  }
+
+  .header--image-box {
+    width: min(25rem, 78vw);
+    height: 32rem;
+  }
+
+  /* On phones, put the work link below the image */
+  .position-abs {
+    position: static;
+    right: auto;
+    bottom: auto;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* Introduction */
+  .introductory--paragraph {
+    max-width: 100%;
+    margin-top: 2.4rem;
+    font-size: 1.6rem;
+    line-height: 1.85;
+    text-align: left;
+  }
+
+  .introduction--container {
+    gap: 3rem;
+  }
+
+  /* Skills: one card per row for comfortable reading */
+  .skills--box {
+    padding: 3.2rem 1.8rem;
+    min-height: auto;
+  }
+
+  .text-box-brown,
+  .txt-box {
+    font-size: 2.6rem;
+  }
+
+  .skills-title-box {
+    padding-bottom: 3rem;
+  }
+
+  .skills-paragraph {
+    line-height: 1.7;
+  }
+
+  .skills-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.8rem;
+  }
+
+  .skills-card {
+    min-height: 0;
+    padding: 2.8rem 2.2rem;
+    border-radius: 2.4rem;
+  }
+
+  .skill-icon {
+    font-size: 6rem;
+  }
+
+  .skill-title {
+    margin: 1.4rem 0;
+  }
+
+  .skill-description {
+    max-width: 30rem;
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+
+  /* Journey and experience */
+  .about--me-text--box {
+    font-size: 2.6rem;
+  }
+
+  .about-me--paragraph {
+    font-size: 1.6rem;
+    line-height: 1.7;
+  }
+
+  .experience-and-work {
+    gap: 0.3rem;
+  }
+
+  .category {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .list-box {
+    margin-left: 2.2rem;
+    margin-bottom: 2.6rem;
+    padding-right: 0;
+    font-size: 1.5rem;
+    line-height: 1.85;
+  }
+
+  .linked-to:link,
+  .linked-to:visited {
+    font-size: 2.4rem;
+  }
+
+  /* Values tabs */
+  .section__description--live-bys {
+    font-size: 1.5rem;
+  }
+
+  .live-by-container > .section__title {
+    text-align: center;
+  }
+
+  .live-by-box {
+    margin-top: 3.8rem;
+    padding: 0 1.8rem;
+  }
+
+  .live-bys-tab-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8rem;
+    padding-top: 1.5rem;
+  }
+
+  .operations__tab {
+    width: 100%;
+    margin: 0;
+    padding: 1.2rem 0.4rem;
+    transform: none;
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+
+  .operations__tab span {
+    margin-right: 0.3rem;
+  }
+
+  .operations__tab--active {
+    transform: translateY(-0.3rem);
+  }
+
+  .operations__content {
+    padding: 2.5rem 0 3.5rem;
+    font-size: 1.5rem;
+  }
+
+  .operations__content--active {
+    gap: 1.2rem;
+  }
+
+  .operations__header {
+    font-size: 1.9rem;
+    line-height: 1.45;
+  }
+
+  .operations__content p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+
+  /* Contact */
+  .interest {
+    margin-top: 7rem;
+  }
+
+  .interest-text-box {
+    font-size: 2.6rem;
+    line-height: 1.3;
+  }
+
+  .interest-text-box p {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.85;
+    font-weight: 400;
+  }
+
+  .btn--say-hello:link,
+  .btn--say-hello:visited {
+    padding: 1.3rem 3.5rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+  }
+
+  /* Footer */
+  .footer {
+    margin-bottom: 0;
+  }
+
+  .footer-box {
+    margin-top: 4rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-text {
+    font-size: 1.4rem;
+  }
+}
+
+/* ==========================================
+   EXTRA-SMALL PHONES: <= 360px
+========================================== */
+@media (max-width: 22.5em) {
+  .container {
+    padding-inline: 1.4rem;
+  }
+
+  .right {
+    gap: 1rem 1.4rem;
+  }
+
+  .nav__right:link,
+  .nav__right:visited {
+    font-size: 1.5rem;
+  }
+
+  .header--image-box {
+    width: 22rem;
+    height: 29rem;
+  }
+
+  .skills--box {
+    padding-inline: 1.2rem;
+  }
+
+  .live-by-box {
+    padding-inline: 1.2rem;
+  }
+
+  .operations__tab {
+    font-size: 1.2rem;
+  }
+
+  .operations__tab span {
+    display: block;
+    margin: 0 0 0.3rem;
+  }
+
+  .btn--say-hello:link,
+  .btn--say-hello:visited {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY: REDUCED MOTION
+========================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .section,
+  .skills-card,
+  .nav__right,
+  .span--btn,
+  .operations__tab,
+  .linked-to {
+    transition: none;
+  }
 }
